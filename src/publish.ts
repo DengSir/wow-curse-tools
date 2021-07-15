@@ -45,7 +45,7 @@ export class Publish {
                 console.log(`Creating package ${fileName} ...`);
                 await flusher.flush(fileName);
                 console.log(`Uploading package ${fileName} ...`);
-                await cli.uploadFile(fileName, project.version, wowVersionId);
+                await cli.uploadFile(fileName, project.version, wowVersionId, project.changelog);
                 await fs.unlink(fileName);
                 console.log(`Publish package ${fileName} done`);
             }

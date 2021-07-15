@@ -11,9 +11,20 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}\\dist\\exec.js",
       // "cwd": "${workspaceFolder}",
-      "cwd": "D:\\AddOns\\tdBag2_Glass",
+      "cwd": "F:\\wow\\src\\code\\2.5.1.38988",
       // "console": "externalTerminal",
-      "args": ["watch", "classic"],
+      "args": ["emmyui", "F:\\wow\\src\\code\\2.5.1.38988\\interface\\FrameXML\\FrameXML.toc"],
+      "preLaunchTask": "webpack: watch",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch Program 2",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\dist\\exec.js",
+      "cwd": "F:\\addons\\tdBag2",
+      "args": ["package"],
       "preLaunchTask": "webpack: watch",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }

@@ -42,7 +42,7 @@ export class Curse {
         return 0;
     }
 
-    async uploadFile(filePath: string, version: string, wowVersion: number) {
+    async uploadFile(filePath: string, version: string, wowVersion: number, changelog = '') {
         if (!this.curseId) {
             console.error('error curse id');
             return;
@@ -53,7 +53,8 @@ export class Curse {
         form.append(
             'metadata',
             JSON.stringify({
-                changelog: '',
+                changelog: changelog,
+                changelogType: ['markdown'],
                 gameVersions: [wowVersion],
                 releaseType: 'release',
                 displayName: version,

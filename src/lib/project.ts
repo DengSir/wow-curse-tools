@@ -9,7 +9,7 @@ import * as path from 'path';
 import * as fs from 'fs-extra';
 import { BuildInfo, Env } from './env';
 import { findFiles } from './files';
-import { readFile } from './util';
+import { readChangeLog, readFile } from './util';
 
 interface Addon {
     name: string;
@@ -40,6 +40,7 @@ export class Project implements Addon {
     private _version: string;
     private _curseId: number;
     private _folder: string;
+    private _changelog?: string;
     private _addons: Addon[] = [];
     private _localizations: Localization[] = [];
     private _buildEnvs = new Map<string, Env>();
@@ -60,6 +61,10 @@ export class Project implements Addon {
 
     get curseId() {
         return this._curseId;
+    }
+
+    get changelog() {
+        return this._changelog;
     }
 
     get addons() {
@@ -182,6 +187,10 @@ export class Project implements Addon {
                     path: v as string,
                 });
             }
+        }
+
+        if (pkg.wow.changelog) {
+            this._changelog = await readChangeLog(pkg.wow.changelog, this._version);
         }
     }
 }

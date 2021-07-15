@@ -67,3 +67,24 @@ export async function copyFile(filePath: string, targetPath: string) {
     await fs.copyFile(filePath, targetPath);
     return true;
 }
+
+export async function readChangeLog(file: string, version: string) {
+    if (!(await fs.pathExists(file))) {
+        return;
+    }
+
+    const data = await readFile(file);
+    const lines: string[] = [];
+
+    for (const [line] of data.matchAll(/[^\r\n]+/g)) {
+        const m = line.match(/^## \[(\d+\.\d+\.\d+)\]/);
+        if (m) {
+            if (m[1] !== version) {
+                break;
+            }
+        } else {
+            lines.push(line);
+        }
+    }
+    return lines.join('\n');
+}

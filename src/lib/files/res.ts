@@ -18,6 +18,8 @@ export class ResFilesFinder {
                 '**.m2',
                 '**.ogg',
                 '**.mp3',
+                '**.ttf',
+                '**.otf',
                 'bindings.xml',
                 '**license*',
                 '**/license*',

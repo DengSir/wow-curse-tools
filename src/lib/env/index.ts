@@ -14,8 +14,9 @@ export enum BuildId {
     Unknown = 0,
     Single,
     Vanilla,
-    Wrath,
-    Cata,
+    // Wrath,
+    // Cata,
+    Mists,
     Mainline,
 }
 

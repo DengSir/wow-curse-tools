@@ -44,19 +44,26 @@ const BUILD_DATA = {
         atlas: ['classic', 'vanilla', 'Classic', 'Vanilla'],
         product: 'wow_classic_era',
     },
-    Wrath: {
+    // Wrath: {
+    //     path: '_classic_',
+    //     suffix: 'Wrath',
+    //     atlas: ['lkc', 'wrath', 'WOTLKC', 'Wrath', 'wlk'],
+    //     product: 'wow_classic',
+    //     version_prefix: '3.',
+    // },
+    // Cata: {
+    //     path: '_classic_',
+    //     suffix: 'Cata',
+    //     atlas: ['cata', 'ctm'],
+    //     product: 'wow_classic',
+    //     version_prefix: '4.',
+    // },
+    Mists: {
         path: '_classic_',
-        suffix: 'Wrath',
-        atlas: ['lkc', 'wrath', 'WOTLKC', 'Wrath', 'wlk'],
+        suffix: 'Mists',
+        atlas: ['mop', 'mists'],
         product: 'wow_classic',
-        version_prefix: '3.',
-    },
-    Cata: {
-        path: '_classic_',
-        suffix: 'Cata',
-        atlas: ['cata', 'ctm'],
-        product: 'wow_classic',
-        version_prefix: '4.',
+        // version_prefix: '5.'
     },
     Mainline: {
         path: '_retail_',

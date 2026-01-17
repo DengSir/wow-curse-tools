@@ -14,6 +14,7 @@ export enum BuildId {
     Unknown = 0,
     Single,
     Vanilla,
+    BCC,
     Wrath,
     // Cata,
     Mists,
@@ -44,6 +45,12 @@ const BUILD_DATA = {
         suffix: 'Vanilla',
         atlas: ['classic', 'vanilla', 'Classic', 'Vanilla'],
         product: 'wow_classic_era',
+    },
+    BCC: {
+        path: '_anniversary_',
+        suffix: 'BCC',
+        atlas: ['bcc', 'BCC', 'anniversary', 'tbc', 'TBC'],
+        product: 'wow_anniversary',
     },
     Wrath: {
         path: '_classic_titan_',

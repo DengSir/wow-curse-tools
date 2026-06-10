@@ -1,10 +1,13 @@
 {
-  "name": "wow-curse-tools",
+  "name": "@dengsir/wow-curse-tools",
   "version": "2.4.6",
   "description": "",
   "main": "dist/index.js",
   "bin": {
     "wct": "bin/wct"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "prepack": "npm run build",

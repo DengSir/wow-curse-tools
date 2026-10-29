@@ -19,6 +19,7 @@ export enum BuildId {
     // Cata,
     Mists,
     Mainline,
+    Forever,
 }
 
 export interface Env {
@@ -78,6 +79,12 @@ const BUILD_DATA = {
         suffix: 'Mainline',
         atlas: ['retail', 'Retail', 'Mainline'],
         product: 'wow',
+    },
+    Forever: {
+        path: '_classic_beta_',
+        suffix: 'Forever',
+        atlas: ['wf', 'WF', 'Forever', 'forever'],
+        product: 'wow_classic_beta',
     },
 };
 

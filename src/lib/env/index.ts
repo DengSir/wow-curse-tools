@@ -81,10 +81,10 @@ const BUILD_DATA = {
         product: 'wow',
     },
     Forever: {
-        path: '_classic_beta_',
+        path: '_forever_',
         suffix: 'Forever',
         atlas: ['wf', 'WF', 'Forever', 'forever'],
-        product: 'wow_classic_beta',
+        product: 'wowf',
     },
 };
 
